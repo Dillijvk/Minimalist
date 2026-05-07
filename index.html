@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minimalist</title>
+
+    <link rel="icon" type="image/x-icon" href="upscalemedia-transformed.jpg" />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Promo Bar -->
+    <div
+      id="promoBar"
+      class="carousel slide promo-bar"
+      data-bs-ride="carousel"
+      data-bs-interval="3000"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          Enjoy free shipping on every order!
+        </div>
+
+        <div class="carousel-item">
+          🎁 Build Your Own Bundle — Save an additional up to 15% off
+        </div>
+
+        <div class="carousel-item">
+          Get 5% OFF + Additional 10% Cashback on App Orders
+        </div>
+
+        <div class="carousel-item">
+          Free Marula Oil Moisturizer on orders over ₹599!
+        </div>
+
+        <div class="carousel-item">
+          Free Tote Bag with every purchase of ₹899!
+        </div>
+
+        <div class="carousel-item">
+          Free Retinol 0.3% Serum with every purchase of ₹1200!
+        </div>
+
+        <div class="carousel-item">
+          Free SPF 60 Sunscreen on purchase of 2 products
+        </div>
+
+        <div class="carousel-item">
+          Trust Circle: Earn rewards on your skincare journey!
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev promo-btn"
+        type="button"
+        data-bs-target="#promoBar"
+        data-bs-slide="prev"
+      >
+        <span>‹</span>
+      </button>
+
+      <button
+        class="carousel-control-next promo-btn"
+        type="button"
+        data-bs-target="#promoBar"
+        data-bs-slide="next"
+      >
+        <span>›</span>
+      </button>
+    </div>
+
+    <!-- Navbar -->
+    <header class="main-navbar">
+      <div class="navbar-inner">
+       <a href="index.html" style="text-decoration: none;"> <div class="logo">Minimalist</div></a>
+
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="skin.html">Skin Care</a>
+          <a href="body.html">Body Care</a>
+          <a href="track.html">Track Order</a>
+        </nav>
+
+        <div class="nav-icons">
+          <i class="bi bi-star"></i>
+          <i class="bi bi-search"></i>
+          <i class="bi bi-person"></i>
+
+          <div class="cart-icon">
+            <i class="bi bi-cart3"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Image Slider -->
+    <section
+      id="heroSlider"
+      class="carousel slide hero-slider"
+      data-bs-ride="carousel"
+      data-bs-interval="3000"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="scroll-img/product-1.jpg" alt="Banner 1" />
+        </div>
+
+        <div class="carousel-item">
+          <img src="scroll-img/product-2.jpg" alt="Banner 2" />
+        </div>
+
+        <div class="carousel-item">
+          <img src="scroll-img/product-3.jpg" alt="Banner 3" />
+        </div>
+
+        <div class="carousel-item">
+          <img src="scroll-img/product-4.jpg" alt="Banner 4" />
+        </div>
+
+        <div class="carousel-item">
+          <img src="scroll-img/product-5.jpg" alt="Banner 5" />
+        </div>
+
+        <div class="carousel-item">
+          <img src="scroll-img/product-6.jpg" alt="Banner 6" />
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev hero-arrow"
+        type="button"
+        data-bs-target="#heroSlider"
+        data-bs-slide="prev"
+      >
+        <i class="bi bi-chevron-left"></i>
+      </button>
+
+      <button
+        class="carousel-control-next hero-arrow"
+        type="button"
+        data-bs-target="#heroSlider"
+        data-bs-slide="next"
+      >
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </section>
+
+    <section class="best-sellers">
+      <h2>Our Best Sellers</h2>
+
+      <div class="product">
+        <div class="pro1">
+          <img class="img" src="product/product1.avif" alt="error" />
+          <h3 class="product-title">Salicylic Acid + LHA 2% Cleanser</h3>
+          <p class="product-desc">Acne, Breakouts & Oiliness</p>
+          <p class="rating">★★★★☆</p>
+          <p class="price">On Sale from ₹ 269</p>
+
+          <div class="size-dropdown">
+            <button class="size-btn" type="button" onclick="toggleSize(this)">
+              Select Size
+            </button>
+
+            <div class="size-list">
+              <div class="size-title">Select Size</div>
+              <div class="size-option">100ml</div>
+              <div class="size-option">250ml</div>
+            </div>
+          </div>
+        </div>
+        <div class="pro1">
+          <img class="img" src="product/product2.avif" alt="error" />
+          <h3 class="product-title">Salicylic Acid 2% Face Serum</h3>
+          <p class="product-desc">Reduces Acne, Blackheads</p>
+          <p class="rating">★★★★☆</p>
+          <p class="price">On Sale from ₹ 224</p>
+
+          <div class="size-dropdown">
+            <button class="size-btn" type="button" onclick="toggleSize(this)">
+              Select Size
+            </button>
+
+            <div class="size-list">
+              <div class="size-title">Select Size</div>
+              <div class="size-option">100ml</div>
+              <div class="size-option">250ml</div>
+            </div>
+          </div>
+        </div>
+        <div class="pro1">
+          <img class="img" src="product/product3.avif" alt="error" />
+          <h3 class="product-title">SPF 50 Sunscreen</h3>
+          <p class="product-desc">Broad Spectrum SPF 50, PA++++</p>
+          <p class="rating">★★★★☆</p>
+          <p class="price">On Sale from ₹ 359</p>
+
+          <div class="size-dropdown">
+            <button class="size-btn" type="button" onclick="toggleSize(this)">
+              Select Size
+            </button>
+
+            <div class="size-list">
+              <div class="size-title">Select Size</div>
+              <div class="size-option">100ml</div>
+              <div class="size-option">250ml</div>
+            </div>
+          </div>
+        </div>
+        <div class="pro1">
+          <img class="img" src="product/product4.avif" alt="error" />
+          <h3 class="product-title">Vitamin B5 10% Moisturizer</h3>
+          <p class="product-desc"> Lightweight Moisturization & Repairs Skin</p>
+          <p class="rating">★★★★☆</p>
+          <p class="price">On Sale from ₹ 314</p>
+
+          <div class="size-dropdown">
+            <button class="size-btn" type="button" onclick="toggleSize(this)">
+              Select Size
+            </button>
+
+            <div class="size-list">
+              <div class="size-title">Select Size</div>
+              <div class="size-option">100ml</div>
+              <div class="size-option">250ml</div>
+            </div>
+          </div>
+        </div>
+        <div class="pro1">
+          <img class="img" src="product/product5.avif" alt="error" />
+          <h3 class="product-title">Vitamin B5 10% Moisturizer</h3>
+          <p class="product-desc"> Lightweight Moisturization & Repairs Skin</p>
+          <p class="rating">★★★★☆</p>
+          <p class="price">On Sale from ₹ 314</p>
+
+          <div class="size-dropdown">
+            <button class="size-btn" type="button" onclick="toggleSize(this)">
+              Select Size
+            </button>
+
+            <div class="size-list">
+              <div class="size-title">Select Size</div>
+              <div class="size-option">100ml</div>
+              <div class="size-option">250ml</div>
+            </div>
+          </div>
+        </div>
+        <div class="pro1">
+          <img class="img" src="product/product6.avif" alt="error" />
+          <h3 class="product-title">Niacinamide 10% Face Serum</h3>
+          <p class="product-desc">educing sebum & pores</p>
+          <p class="rating">★★★★☆</p>
+          <p class="price">On Sale from ₹  539</p>
+
+          <div class="size-dropdown">
+            <button class="size-btn" type="button" onclick="toggleSize(this)">
+              Select Size
+            </button>
+
+            <div class="size-list">
+              <div class="size-title">Select Size</div>
+              <div class="size-option">100ml</div>
+              <div class="size-option">250ml</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pro1">
+          <img class="img" src="product/product8.avif" alt="error" />
+          <h3 class="product-title">Vitamin C 10% Face Serum</h3>
+          <p class="product-desc">Brighter, Glowing & Healthy Looking Skin</p>
+          <p class="rating">★★★★☆</p>
+          <p class="price">On Sale from ₹  269</p>
+
+          <div class="size-dropdown">
+            <button class="size-btn" type="button" onclick="toggleSize(this)">
+              Select Size
+            </button>
+
+            <div class="size-list">
+              <div class="size-title">Select Size</div>
+              <div class="size-option">100ml</div>
+              <div class="size-option">250ml</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pro1">
+          <img class="img" src="product/product7.avif" alt="error" />
+          <h3 class="product-title">Niacinamide 10% Face Serum</h3>
+          <p class="product-desc">educing sebum & pores</p>
+          <p class="rating">★★★★☆</p>
+          <p class="price">On Sale from ₹  539</p>
+
+          <div class="size-dropdown">
+            <button class="size-btn" type="button" onclick="toggleSize(this)">
+              Select Size
+            </button>
+
+            <div class="size-list">
+              <div class="size-title">Select Size</div>
+              <div class="size-option">100ml</div>
+              <div class="size-option">250ml</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Your JS -->
+    <script>
+      function toggleSize(button) {
+        button.parentElement.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

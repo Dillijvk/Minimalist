@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minimalist</title>
+
+    <link rel="icon" type="image/x-icon" href="upscalemedia-transformed.jpg" />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Promo Bar -->
+    <div
+      id="promoBar"
+      class="carousel slide promo-bar"
+      data-bs-ride="carousel"
+      data-bs-interval="3000"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          Enjoy free shipping on every order!
+        </div>
+
+        <div class="carousel-item">
+          🎁 Build Your Own Bundle — Save an additional up to 15% off
+        </div>
+
+        <div class="carousel-item">
+          Get 5% OFF + Additional 10% Cashback on App Orders
+        </div>
+
+        <div class="carousel-item">
+          Free Marula Oil Moisturizer on orders over ₹599!
+        </div>
+
+        <div class="carousel-item">
+          Free Tote Bag with every purchase of ₹899!
+        </div>
+
+        <div class="carousel-item">
+          Free Retinol 0.3% Serum with every purchase of ₹1200!
+        </div>
+
+        <div class="carousel-item">
+          Free SPF 60 Sunscreen on purchase of 2 products
+        </div>
+
+        <div class="carousel-item">
+          Trust Circle: Earn rewards on your skincare journey!
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev promo-btn"
+        type="button"
+        data-bs-target="#promoBar"
+        data-bs-slide="prev"
+      >
+        <span>‹</span>
+      </button>
+
+      <button
+        class="carousel-control-next promo-btn"
+        type="button"
+        data-bs-target="#promoBar"
+        data-bs-slide="next"
+      >
+        <span>›</span>
+      </button>
+    </div>
+
+    <!-- Navbar -->
+    <header class="main-navbar">
+      <div class="navbar-inner">
+        <div class="logo">Minimalist</div>
+
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="skin.html">Skin Care</a>
+          <a href="body.html">Body Care</a>
+          <a href="track.html">Track Order</a>
+        </nav>
+
+        <div class="nav-icons">
+          <i class="bi bi-star"></i>
+          <i class="bi bi-search"></i>
+          <i class="bi bi-person"></i>
+
+          <div class="cart-icon">
+            <i class="bi bi-cart3"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="skin-care">
+      <h2>Skin Care</h2>
+
+      <div class="product">
+        <div class="pro1">
+          <img class="img" src="skin/product1.avif" alt="error" />
+          <h3 class="product-title">Lip Balm SPF 30</h3>
+          <p class="product-desc">Protects, heals and nourishes dry</p>
+          <p class="rating">★★★★☆</p>
+          <p class="price">On Sale from ₹ 269</p>
+
+          <div class="size-dropdown">
+            <button class="size-btn" type="button" onclick="toggleSize(this)">
+              Select Size
+            </button>
+
+            <div class="size-list">
+              <div class="size-title">Select Size</div>
+              <div class="size-option">100ml</div>
+              <div class="size-option">250ml</div>
+            </div>
+          </div>
+        </div>
+        <div class="pro1">
+          <img class="img" src="skin/product2.avif" alt="error" />
+          <h3 class="product-title">Salicylic Acid + LHA 2% Cleanser</h3>
+          <p class="product-desc">Reduces Sebum & Prevents Breakout </p>
+          <p class="rating">★★★★☆</p>
+          <p class="price">On Sale from ₹ 269</p>
+
+          <div class="size-dropdown">
+            <button class="size-btn" type="button" onclick="toggleSize(this)">
+              Select Size
+            </button>
+
+            <div class="size-list">
+              <div class="size-title">Select Size</div>
+              <div class="size-option">100ml</div>
+              <div class="size-option">250ml</div>
+            </div>
+          </div>
+        </div>
+        <div class="pro1">
+          <img class="img" src="skin/product3.avif" alt="error" />
+          <h3 class="product-title">Oat Extract 6% Gentle Cleanser</h3>
+          <p class="product-desc">Cleanser for damaged, sensitive skin</p>
+          <p class="rating">★★★★☆</p>
+          <p class="price">On Sale from ₹ 269</p>
+
+          <div class="size-dropdown">
+            <button class="size-btn" type="button" onclick="toggleSize(this)">
+              Select Size
+            </button>
+
+            <div class="size-list">
+              <div class="size-title">Select Size</div>
+              <div class="size-option">100ml</div>
+              <div class="size-option">250ml</div>
+            </div>
+          </div>
+        </div>
+        <div class="pro1">
+          <img class="img" src="skin/product4.avif" alt="error" />
+          <h3 class="product-title">Polyhydroxy Acid Face Toner</h3>
+          <p class="product-desc">Tightens Pores, Exfoliates, Hydrates </p>
+          <p class="rating">★★★★☆</p>
+          <p class="price">On Sale from ₹ 359</p>
+
+          <div class="size-dropdown">
+            <button class="size-btn" type="button" onclick="toggleSize(this)">
+              Select Size
+            </button>
+
+            <div class="size-list">
+              <div class="size-title">Select Size</div>
+              <div class="size-option">100ml</div>
+              <div class="size-option">250ml</div>
+            </div>
+          </div>
+        </div>
+        <div class="pro1">
+          <img class="img" src="skin/product5.avif" alt="error" />
+          <h3 class="product-title">Aquaporin Booster 5% Cleanser</h3>
+          <p class="product-desc">Stimulates hydration & cleans without drying</p>
+          <p class="rating">★★★★☆</p>
+          <p class="price">On Sale from ₹ 269</p>
+
+          <div class="size-dropdown">
+            <button class="size-btn" type="button" onclick="toggleSize(this)">
+              Select Size
+            </button>
+
+            <div class="size-list">
+              <div class="size-title">Select Size</div>
+              <div class="size-option">100ml</div>
+              <div class="size-option">250ml</div>
+            </div>
+          </div>
+        </div>
+        <div class="pro1">
+          <img class="img" src="skin/product6.avif" alt="error" />
+          <h3 class="product-title">SPF 60 Sunscreen</h3>
+          <p class="product-desc">Broad spectrum SPF 60, PA++++</p>
+          <p class="rating">★★★★☆</p>
+          <p class="price">On Sale from ₹ 539</p>
+
+          <div class="size-dropdown">
+            <button class="size-btn" type="button" onclick="toggleSize(this)">
+              Select Size
+            </button>
+
+            <div class="size-list">
+              <div class="size-title">Select Size</div>
+              <div class="size-option">100ml</div>
+              <div class="size-option">250ml</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Your JS -->
+    <script>
+      function toggleSize(button) {
+        button.parentElement.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

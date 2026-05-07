@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minimalist Track Order</title>
+
+  <link rel="stylesheet" href="track.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+body {
+  background: #f3f3f3;
+  color: #000;
+}
+
+/* Header */
+.track-header {
+  width: 100%;
+  height: 74px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.track-header h1 {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+/* Main Page */
+.track-page {
+  min-height: 650px;
+  background: #f3f3f3;
+  padding: 20px 0 100px;
+}
+
+.track-container {
+  width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.left-area {
+  width: 930px;
+}
+
+/* Track Box */
+.track-box {
+  width: 100%;
+  height: 230px;
+  background: #fff;
+  border-radius: 3px;
+  padding: 78px 22px;
+}
+
+.radio-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.radio-row label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #000;
+  cursor: pointer;
+}
+
+.radio {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #111;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+.radio.empty {
+  border-color: #1d4f91;
+}
+
+.radio.active {
+  background: #000;
+}
+
+.radio.active::after {
+  content: "✓";
+  color: #fff;
+  font-size: 10px;
+  position: absolute;
+  left: 2px;
+  top: -2px;
+}
+
+.input-row {
+  display: flex;
+  align-items: center;
+}
+
+.input-row input {
+  width: 450px;
+  height: 36px;
+  border: 1px solid #b8c9df;
+  padding: 0 10px;
+  font-size: 13px;
+  outline: none;
+}
+
+.input-row button {
+  height: 36px;
+  padding: 0 20px;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Category */
+.category-grid {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.cat-card {
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px 20px 18px;
+  text-align: center;
+}
+
+.cat-img {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 18px;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.cat-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.42);
+}
+
+.cat-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cat-img h3 {
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.cat-card p {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* Right Image */
+.right-img {
+  width: 300px;
+  height: 535px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.right-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Footer */
+.footer {
+  background: #181818;
+  color: #fff;
+  padding: 36px 0;
+}
+
+.footer-inner {
+  width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left p {
+  font-size: 13px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.footer-left i {
+  margin-right: 8px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 22px;
+  margin-top: 8px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.store-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.store-buttons button {
+  background: #111;
+  color: #fff;
+  border: 1px solid #333;
+  font-size: 9px;
+  padding: 3px 10px;
+  border-radius: 3px;
+}
+
+.social {
+  display: flex;
+  justify-content: flex-end;
+  gap: 22px;
+  margin: 10px 0;
+}
+
+.social i {
+  font-size: 14px;
+}
+
+.powered {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.powered span {
+  color: #228be6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .track-container {
+    width: 94%;
+    flex-direction: column;
+  }
+
+  .left-area {
+    width: 100%;
+  }
+
+  .track-box {
+    height: auto;
+    padding: 35px 20px;
+  }
+
+  .input-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input-row input {
+    width: 100%;
+  }
+
+  .input-row button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .right-img {
+    width: 100%;
+    height: 420px;
+  }
+
+  .footer-inner {
+    width: 94%;
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .store-buttons,
+  .social {
+    justify-content: center;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="track-header">
+    <h1>Minimalist</h1>
+  </header>
+
+  <!-- Main Section -->
+  <main class="track-page">
+
+    <div class="track-container">
+
+      <!-- Left Side -->
+      <div class="left-area">
+
+        <!-- Track Box -->
+        <div class="track-box">
+
+          <div class="radio-row">
+            <label>
+              <span class="radio empty"></span>
+              Order ID
+            </label>
+
+            <label>
+              <span class="radio active"></span>
+              Tracking ID
+            </label>
+          </div>
+
+          <div class="input-row">
+            <input type="text" placeholder="Enter Tracking ID/AWB">
+            <button>Track Your Order</button>
+          </div>
+
+        </div>
+
+        <!-- Category Cards -->
+        <div class="category-grid">
+
+          <div class="cat-card">
+            <div class="cat-img">
+              <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400" alt="Skin">
+              <h3>Skin Care</h3>
+            </div>
+            <p>Skin</p>
+          </div>
+
+          <div class="cat-card">
+            <div class="cat-img">
+              <img src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=400" alt="Hair">
+              <h3>Hair Care</h3>
+            </div>
+            <p>Hair</p>
+          </div>
+
+          <div class="cat-card">
+            <div class="cat-img">
+              <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400" alt="Body">
+              <h3>Body Care</h3>
+            </div>
+            <p>Bath & Body</p>
+          </div>
+
+          <div class="cat-card">
+            <div class="cat-img">
+              <img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=400" alt="Lip">
+              <h3>Lip Care</h3>
+            </div>
+            <p>Lip</p>
+          </div>
+
+          <div class="cat-card">
+            <div class="cat-img">
+              <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400" alt="Eye">
+              <h3>Eye Care</h3>
+            </div>
+            <p>Eye</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Right Image -->
+      <div class="right-img">
+        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600" alt="Product">
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+
+      <div class="footer-left">
+        <p><i class="bi bi-envelope"></i> help@beminimalist.co</p>
+        <p><i class="bi bi-telephone"></i> +91-9772346555</p>
+
+        <div class="footer-links">
+          <a href="#">Return Policy</a>
+          <a href="#">Refund Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <div class="store-buttons">
+          <button>Available on the<br>App Store</button>
+          <button>Get it on<br>Google play</button>
+        </div>
+
+        <div class="social">
+          <i class="bi bi-facebook"></i>
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-youtube"></i>
+        </div>
+
+        <p class="powered">Powered by <span>CLICKPOST</span></p>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
